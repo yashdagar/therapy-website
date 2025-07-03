@@ -2,28 +2,80 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #7e7e6b;
+  --heading-1-size-value: 4;
+  --heading-2-size-value: 2.5;
+  --heading-3-size-value: 2;
 }
+
+
+/* fonts directly copied from the website */
+/* it will be statically generated to be the same as the website after build */
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/5e0e41/00000000000000007735d680/31/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/5e0e41/00000000000000007735d680/31/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/5e0e41/00000000000000007735d680/31/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/634972/00000000000000007735d687/31/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/634972/00000000000000007735d687/31/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/634972/00000000000000007735d687/31/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;
+}@font-face{font-family:adobe-garamond-pro;src:url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-freight: freight-display-pro;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: freight-sans-pro;
+  font-size: 18px;
 }
 
-/* fonts directly copied from the website */
-@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/5e0e41/00000000000000007735d680/31/l  subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:autoid=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/5e0e41/00000000000000007735d680/31/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/99669d/00000000000000007735d65d/31/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/dbd8fc/00000000000000007735d68b/31/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2360bd/00000000000000007735d66e/31/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/634972/00000000000000007735d687/31/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/634972/00000000000000007735d687/31/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/634972/00000000000000007735d687/31/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/966b68/00000000000000007735d667/31/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-sans-pro;src:url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/9c1c62/00000000000000007735d677/31/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:adobe-garamond-pro;src:url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1a756d/00000000000000007735d927/31/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/1eb34a/000000000000000077359fa2/31/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/fed74c/000000000000000077359f97/31/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/ca3884/000000000000000077359fa5/31/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:freight-display-pro;src:url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/ccb756/000000000000000077359f9a/31/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
+h1, h2, h3, h4{
+  @apply text-center whitespace-pre-wrap ease-in-out duration-[0.9s] my-8;
+  font-family: freight-display-pro;
+}
+
+h1, h2, h3, h4 u {
+  @apply underline-offset-[.2em] decoration-1;
+}
+
+button {
+  @apply rounded-[100%] text-sm md:text-2xl bg-[#94b0b0] py-2 px-6 md:py-4 md:px-12 w-fit h-fit text-white uppercase transition-colors hover:bg-[#adc8c8] cursor-pointer;
+}
+
+h1{
+  @apply text-[#fefefe] font-bold;
+  font-size: calc((var(--heading-1-size-value) - 1) * 1.2vw + 1rem);
+}
+
+h2{
+  @apply font-light! text-[#41413f]! leading-snug;
+  font-size: calc((var(--heading-2-size-value) - 1) * 1.2vw + 1rem);
+}
+
+h3{
+  @apply font-light! text-[#41413f]! leading-snug;
+  font-size: calc((var(--heading-3-size-value) - 1) * 1.2vw + 1rem);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 24rem;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
